@@ -32,7 +32,7 @@ export default defineUserConfig({
   // 主题配置 FileList 是 vuepress 的一个主题，文件展示的功能全部由这个主题提供。
   theme: FileList([
     
-    {
+    
       mountPath: "/",
       analysis: githubReleasesFilesAnalysis({ user: "wuhunfeng", repository: "FList" }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
