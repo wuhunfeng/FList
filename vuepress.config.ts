@@ -40,19 +40,7 @@ export default defineUserConfig({
       // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
 
     },
-  
-    {
-      
-      mountPath: "/huggingface测试",
-      analysis: huggingFaceDatasetsAnalysis({
-        userName: "Open-Orca",
-        datasetsName: "OpenOrca",
-        branchName: "main",
-        path: "/",
-        //最大深度,如果文件夹有很多层最大递归解析多少层，默认10
-        maxDeep: 3
-      }),
-    },
+
     {
       mountPath: "/gitee测试/发行版",
       analysis: giteeReleasesFilesAnalysis({
@@ -68,14 +56,7 @@ export default defineUserConfig({
         repository: "flist-test"
       }),
     },
-    {
-      mountPath: "/ProgrammingVTuberLogos",
-      analysis: githubReposAnalysis({
-        user: "Aikoyori",
-        repository: "ProgrammingVTuberLogos",
-      }),
-      downProxy: cloudflarePagesDownProxy()
-    },
+    
     // ... 可以配置多个挂载路径和仓库，以此类推
   ])
 })
